@@ -1,0 +1,88 @@
+.slider {
+  overflow-x: scroll;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px;
+  background-color: rgb(157, 157, 249);
+}
+
+::-webkit-scrollbar {
+  height: 10px;
+  width: 10px;
+  padding: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: hidden;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(86, 86, 149);
+
+  border-radius: 15px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(47, 47, 91);
+}
+
+.container {
+  width: 210px;
+  height: 380px;
+  border-radius: 15px;
+  background-color: rgba(54, 54, 170, 0.5);
+  margin: 0 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.image {
+  width: inherit;
+  border-radius: 15px 15px 0 0;
+}
+
+.name {
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.role {
+  font-size: 15px;
+  width: 200px;
+  height: 15px;
+  margin-left: 5px;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+}
+
+.plus {
+  font-size: 20 px;
+  width: 100px;
+}
+
+@media only screen and (max-width: 800px) {
+
+  .container {
+    width: 140px;
+    height: 270px;
+    margin: 0 10px;
+  }
+
+  .name {
+    font-size: 15px;
+  }
+  
+  .role {
+    font-size: 10px;
+    width: 135px;
+  }
+  
+}

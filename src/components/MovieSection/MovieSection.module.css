@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto+Condensed&family=Source+Sans+Pro&display=swap');
+
+.title {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: black;
+    margin: 20px 25px;
+}
+
+.children {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    height: 400px;
+}
+
+.btnP {
+    cursor: pointer;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 150px;
+    height: 60px;
+    width: 30px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+}
+
+.btnN {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 150px;
+    left: 96vw;
+    height: 60px;
+    width: 30px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+}
+
+.section {
+    position: relative;
+}
+
+.carousel {
+    height: 450px;
+}
+
+@media only screen and (max-width: 800px) {
+
+    .carousel {
+        height: 350px;
+    }
+}

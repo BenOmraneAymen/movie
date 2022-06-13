@@ -1,0 +1,229 @@
+.navbar_Container {
+    position: sticky;
+    top: 0px;
+    z-index: 5;
+}
+
+.navbar {
+    background-color: rgb(73, 73, 158);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    z-index: 2;
+}
+
+.logo {
+    height: 35px;
+    margin: 0 10px;
+}
+
+.menu {
+    width: 30px;
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+.btn {
+    background-color: rgb(187, 0, 0);
+    color: white;
+    margin: 0px 10px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: rgb(129, 0, 0)
+}
+
+
+.navbar_menu {
+    width: 100%;
+    height: 20%;
+    background-color: rgb(50, 50, 132);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: show 1s ease;
+    animation-fill-mode: forwards;
+}
+
+@keyframes show {
+
+    0% {
+        overflow: hidden;
+        background-color: rgb(50, 50, 132);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 0px;
+        margin: 0px;
+        font-size: 0px;
+    }
+
+    100% {
+        width: 100%;
+        height: 20%;
+        background-color: rgb(50, 50, 132);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+.hiddenNavbarMenu {
+    animation: hide 1s linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes hide {
+    0% {
+        width: 100%;
+        height: 20%;
+        background-color: rgb(50, 50, 132);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    100% {
+        overflow: hidden;
+        background-color: rgb(50, 50, 132);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 0px;
+        margin: 0px;
+        font-size: 0px;
+    }
+
+}
+
+.navbar_search {
+    width: 40%;
+    padding: 10px;
+    margin: 15px;
+    border-radius: 20px;
+    animation: showSearch 1s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes showSearch {
+    0% {
+        width: 0px;
+        padding: 0px;
+        margin: 0px;
+        opacity: 0;
+    }
+
+    100% {
+        width: 40%;
+        padding: 10px;
+        margin: 15px;
+        border-radius: 20px;
+        opacity: 1;
+    }
+
+}
+
+
+.hiddenGenreMenu {
+    display: none;
+}
+
+.genre_menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0px 50px;
+}
+
+.genre {
+    background-color: rgb(187, 0, 0);
+    color: white;
+    margin: 10px 10px;
+    padding: 10px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    animation: genre 1s ease;
+    animation-fill-mode: forwards;
+}
+
+@keyframes genre {
+
+    0% {
+        margin: 0px;
+        padding: 0px;
+        height: 0px;
+        font-size: 0px;
+        opacity: 0;
+    }
+
+    100% {
+        color: white;
+        margin: 10px 10px;
+        padding: 10px 15px;
+        border-radius: 20px;
+        cursor: pointer;
+        opacity: 1;
+    }
+}
+
+.hiddenGenre {
+    animation: hidegenre 1s ease;
+    animation-fill-mode: forwards;
+}
+
+@keyframes hidegenre {
+    0% {
+        background-color: rgb(187, 0, 0);
+        color: white;
+        margin: 10px 10px;
+        padding: 10px 15px;
+        border-radius: 20px;
+        cursor: pointer;
+        opacity: 1;
+    }
+
+
+    100% {
+        margin: 0px;
+        padding: 0px;
+        height: 0px;
+        font-size: 0px;
+        opacity: 0;
+    }
+}
+
+
+.genre:hover {
+    background-color: rgb(129, 0, 0);
+}
+
+@media only screen and (max-width: 900px) {
+
+    .btn {
+        padding: 8px 20px;
+        font-size: 10px;
+    }
+
+}
+
+@media only screen and (max-width: 750px) {
+
+    .genre {
+        padding: 8px 12px;
+        font-size: 10px;
+    }
+
+    .genre_menu {
+        margin: 0px 25px;
+    }
+}
