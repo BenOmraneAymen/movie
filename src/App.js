@@ -6,6 +6,7 @@ import Footer from './components/footer/Footer.js';
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Switch, Route, Routes } from "react-router-dom";
 import Movie from './components/movie/movie';
+import CategoryList from './components/categoryList/CategoryList';
 
 
 function App() {
@@ -66,6 +67,9 @@ function App() {
               <MovieSection sectionTitle='POPULAR TV SHOWS' show={results} type='tv' />
               <MovieSection sectionTitle='UPCOMING FILMS' show={upcomingResults} type='movie' />
             </>
+          } />
+          <Route path=':id/:page' element={
+            <CategoryList/>
           } />
           <Route path='movie/:id/*' element={
             <Movie type='movie' />

@@ -54,7 +54,11 @@ export default function Navbar() {
                 <div className={/*isShown ? */css['genre_menu']/* : css['hiddenGenreMenu']*/}>
                     {
                         Genre?.map((genre) => {
-                            return <div key={genre.id} className={isShown ? css['genre'] : css['hiddenGenre']} > {genre.name}</div>
+                            return (
+                                <Link to={`/${genre.id}/1`} style={{textDecoration:"none"}} >
+                                    <div key={genre.id} className={isShown ? css['genre'] : css['hiddenGenre']} > {genre.name}</div>
+                                </Link>
+                            )
                         })
                     }
                 </div>

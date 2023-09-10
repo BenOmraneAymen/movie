@@ -109,22 +109,24 @@ function Movie(props) {
                                 <img src={IMG_URL + movie?.poster_path} className={css['poster']} />
                                 <div className={css['movie_description']}>
                                     <h1 className={css['title']}>{movie?.title || movie?.name}<span className={css['title_date']}>({date})</span></h1>
-                                    <div>
-                                        <span className={css['date']}>{movie?.release_date || movie?.first_air_date}</span>
-                                        {movie.genres?.map((genre) => {
-                                            return <span className={css['genre']}>{genre.name}</span>
-                                        })}
-                                    </div>
                                     <div className={css['buttons']}>
-                                        <div className={css['rating']}>{movie?.vote_average * 10}%</div>
-                                        <div className={css['button']}><i class="fi fi-ss-star" style={{ aspectRatio: '1 / 1' }}></i></div>
-                                        <div className={css['button']}><i class="fi fi-sr-heart" style={{ aspectRatio: '1 / 1' }}></i></div>
-                                        <div className={css['button']}><i class="fi fi-ss-bookmark" style={{ aspectRatio: '1 / 1' }}></i></div>
-                                        <div className={css['button']}><i class="fi fi-br-list" style={{ aspectRatio: '1 / 1' }}></i></div>
+                                        {
+                                            movie?.vote_average &&
+                                            <div className={css['rating']}>{movie?.vote_average.toFixed(1) * 10}%</div>
+                                        }
+                                        <div>
+                                            <span className={css['date']}>{movie?.release_date || movie?.first_air_date}</span>
+                                            {movie.genres?.map((genre) => {
+                                                return <span className={css['genre']}>{genre.name}</span>
+                                            })}
+                                        </div>
                                     </div>
                                     <h3 className={css['tagline']}>{movie?.tagline}</h3>
                                     <h2 className={css['sub_title']}>Overview</h2>
-                                    <div className={css['overview']}>{movie?.overview}</div>
+                                    {
+                                        movie?.overview &&
+                                    <div className={css['overview']}>{movie?.overview.split(".").splice(0,4).join(".")}</div>
+                                    }
                                 </div>
                             </div>
                             <img src={IMG_URL + movie?.backdrop_path} className={css['backdrop']} />

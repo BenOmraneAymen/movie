@@ -17,7 +17,9 @@ export default function MovieSection(props) {
         { width: 1400, itemsToShow: 6 },
     ];
     let arr = Array.from(props.show);
+
     return (
+        arr.length > 0 &&
         <>
             <h1>{props.sectionTitle}</h1>
             <ReactElasticCarousel breakPoints={breakpoints} disableArrowsOnEnd={false} className={css['carousel']} >
